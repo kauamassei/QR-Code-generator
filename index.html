@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="./src/css/style.css" />
     <script src="./src/js/script.js" defer></script>
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <!-- FONTE ROBOTO-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,17 +20,61 @@
     />
   </head>
   <body>
-    <div class="container">
-      <header id="qr-header">
-        <h1>Gerador de QR Code</h1>
-        <p>Insira uma URL ou texto, para criar um QR Code</p>
-      </header>
-      <div id="qr-form">
-        <input type="text" placeholder="Digite a URL ou texto...">
-        <button>Gerar QR Code</button>
+    <nav>
+      <div class="logo-container">
+        <a href=""><img src="./src/img/logoqrcode.png" alt="" /></a>
+        <h1 class="title">QR Code Generator</h1>
       </div>
-      <div id="qr-code">
-        <img src="src/img/qrcode.png" alt="QR Code">
+      <div class="hamburger-menu" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="menu" class="nav-list">
+        <li><a class="nav-itens" href="#home">Home</a></li>
+        <li><a class="nav-itens" href="#generator">Gerar QR-Code</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <div id="home" class="home">
+        <h1 class="titleMain">QR Code Generator</h1>
+        <h4>Crie seu QR Code personalizado com um clique!</h4>
+      </div>
+
+      <div class="card-contents">
+        <div class="cards">
+          <i id="firstIcon" class="fa-regular fa-file-lines"></i> <br />
+          <p class="text-description">
+            Escolha textos, links ou URL's
+          </p>
+        </div>
+        <div class="cards">
+          <i id="secondIcon" class="fa-regular fa-pen-to-square"></i>
+          <p class="text-description">
+            Insira no campo de texto seu link e crie seu QR Code
+          </p>
+        </div>
+        <div class="cards">
+          <i id="thirdIcon" class="fa-regular fa-share-from-square"></i>
+          <p class="text-description">Compartilhe seu novo QR Code</p>
+        </div>
+      </div>
+    </main>
+
+    <div id="generator" class="qrcodeContainer">
+      <div class="container">
+        <header id="qr-header">
+          <h1>Gerar QR Code</h1>
+          <p>Insira uma URL ou texto, para criar um QR Code</p>
+        </header>
+        <div id="qr-form">
+          <input type="text" placeholder="Digite a URL ou texto..." />
+          <button>Gerar QR Code</button>
+        </div>
+        <div id="qr-code">
+          <img src="src/img/qrcode.png" alt="QR Code" />
+        </div>
       </div>
     </div>
   </body>

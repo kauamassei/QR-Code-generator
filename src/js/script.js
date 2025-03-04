@@ -39,3 +39,14 @@ qrCodeInput.addEventListener("keyup", () => {
     qrCodeBtn.innerText = "Gerar QR Code"; // insere outro texto no botao
     }
 })
+
+// Botão navbar
+
+const hamburger = document.getElementById("hamburger");
+const menu = document.getElementById("menu");
+
+hamburger.addEventListener("click", () => {
+  menu.classList.toggle("active");
+  hamburger.classList.toggle("open"); // Anima o botão hambúrguer
+});
+ 
